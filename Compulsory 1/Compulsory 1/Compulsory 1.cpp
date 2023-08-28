@@ -2,23 +2,41 @@
 #include <iostream>
 using namespace std;
 
-int recurive_sum()
+double recursion_sum(int number)
+{
+	if (number == 1)
+	{
+		return 1;
+	}
+
+	else
+	{
+		return number * recursion_sum(number - 1);
+	}
+}
+
+int fibonacci_sum()
 {
 	
 }
 
 int main()
 {
-	double number;
-	cout << "Please enter a positive number:";
-	cin >> number;
 
-	int factorial = 1;
-	for (int i = 1; i <= number; i++)
-	{
-		factorial = factorial * i;
-	}
+	//if(Recursion)
+	//{
+		int number;
+		cout << "Please enter a positive number: ";
+		cin >> number;
+		cout << "The Recursive of " << number << " = " << recursion_sum(number) << endl;
+	//}
 
-	cout << "The Factorial of " << number << " = " << factorial << endl;
+	//if(Fibonacci)
+	//{ 
+	//	int number;
+	//	cout << "Enter a number: ";
+	//	cin >> number;
+	//	cout << "
+	//}
 
 }
