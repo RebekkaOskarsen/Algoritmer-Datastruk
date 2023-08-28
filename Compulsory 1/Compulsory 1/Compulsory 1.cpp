@@ -16,6 +16,7 @@ double recursion_sum(int number)
 
 int fibonacci_sum(int value)
 {
+	//Base condition
 	if (value <= 0)
 	{
 		return 0;
@@ -24,6 +25,8 @@ int fibonacci_sum(int value)
 	{
 		return 1;
 	}
+
+	//Recursion
 	else
 	{
 		return fibonacci_sum(value - 1) + fibonacci_sum(value - 2);
@@ -33,22 +36,17 @@ int fibonacci_sum(int value)
 int main()
 {
 
-	//if(Recursion)
-	//{
 		double number;
 		cout << "Please enter a positive number: ";
 		cin >> number;
 		cout << "The Recursive of " << number << " = " << recursion_sum(number) << endl;
 		
-	//}
-
-	//if(Fibonacci)
-	//{ 
+	
 		int value;
 		cout << "Enter a number: ";
 		cin >> value;
 		cout << "The Value of " << value << " = " << fibonacci_sum(value)<< endl;
 		return 0;
-	//}
+
 
 }
