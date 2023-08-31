@@ -2,15 +2,17 @@
 #include <iostream>
 using namespace std;
 
-double recursion_sum(int number)
+double factorial_sum(int number)
 {
+	//Base condition
 	if (number == 1)
 	{
 		return 1;
 	}
+	//Recursion
 	else
 	{
-		return number * recursion_sum(number - 1);
+		return number * factorial_sum(number - 1);
 	}
 }
 
@@ -36,17 +38,19 @@ int fibonacci_sum(int value)
 int main()
 {
 
-		double number;
-		cout << "Please enter a positive number: ";
-		cin >> number;
-		cout << "The Recursive of " << number << " = " << recursion_sum(number) << endl;
-		
+	int number;
+	cout << "Please enter a positive number: ";
+	cin >> number;
+	cout << "The Factorial of " << number << " = " << factorial_sum(number) << endl;
 	
-		int value;
-		cout << "Enter a number: ";
-		cin >> value;
-		cout << "The Value of " << value << " = " << fibonacci_sum(value)<< endl;
-		return 0;
+	cout << endl;
+
+	int value;
+	cout << "Enter a Fibonacci value: ";
+	cin >> value;
+	cout << "The Value of " << value << " = " << fibonacci_sum(value)<< endl;
+
+	return 0;
 
 
 }
